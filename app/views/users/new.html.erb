@@ -1,7 +1,9 @@
-<%= simple_form_for @user do |f| %>
-  <%= f.input :username, class: "form-control" %>
-  <%= f.input :email, class: "form-control" %>
-  <%= f.input :password, required: true, class: "form-control" %>
-  <%= f.input :password_confirmation, required: true, class: "form-control" %>
-  <%= f.button :submit, class: "btn-outline-secondary" %>
-<% end %>
+<div id="signup" class="row justify-content-md-center">
+  <%= simple_form_for @user do |f| %>
+    <%= f.input :username %>
+    <%= f.input :email %>
+    <%= f.input :password, required: true %>
+    <%= f.input :password_confirmation, required: true %>
+    <%= f.button :submit, class: "btn btn-primary form-control" %>
+  <% end %>
+</div>

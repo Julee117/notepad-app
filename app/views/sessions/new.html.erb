@@ -1,5 +1,7 @@
-<%= simple_form_for :login, { url: login_path } do |f| %>
-  <%= f.input :username %>
-  <%= f.input :password %>
-  <%= f.button :submit, "Log In" %>
-<% end %>
+<div id="signup" class="row justify-content-md-center">
+  <%= simple_form_for :login, { url: login_path } do |f| %>
+      <%= f.input :username, input_html: { name: "username" }  %>
+      <%= f.input :password, input_html: { name: "password" }  %>
+    <%= f.button :submit, "Log In", class: "btn btn-primary form-control" %>
+  <% end %>
+</div>
