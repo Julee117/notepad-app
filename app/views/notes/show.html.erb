@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="note-show">
+    <h1><%= @note.title %></h1>
+    <p><%= simple_format(@note.content) %></p>
+  </div>
+  <div class="buttons">
+    <a><%= link_to "Notes", notes_path, class: "btn btn-primary btn-sm" %></a>
+    <a><%= link_to "Edit", edit_note_path(@note), class: "btn btn-primary btn-sm" %></a>
+    <a><%= link_to "Delete", note_path(@note), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-primary btn-sm" %></a>
+  </div>
+</div>
