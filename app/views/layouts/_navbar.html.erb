@@ -1,0 +1,11 @@
+<nav class="navbar" id="nav-layout">
+  <% if logged_in? %>
+    <span>Notepad</span>
+    <span><a><%= link_to "New Note", new_note_path, class: "btn btn-outline-primary" %></a>
+      <a><%= link_to "Sign Out", logout_path, method: "delete", class: "btn btn-outline-primary" %></a>
+    </span>
+  <% else %>
+    <span>Notepad</span>
+    <span><%= link_to "Log In", login_path, class: "btn btn-outline-primary" %></span>
+  <% end %>
+</nav>
