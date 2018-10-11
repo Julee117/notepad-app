@@ -1,5 +1,7 @@
-<%= simple_form_for @note do |f| %>
-  <%= f.input :title %>
-  <%= f.input :content %>
-  <%= f.button :submit %>
-<% end %>
+<div class="note-form">
+  <%= simple_form_for @note do |f| %>
+    <%= f.input :title %>
+    <%= f.input :content %>
+    <%= f.button :submit, "Submit", class: "btn btn-primary form-control" %>
+  <% end %>
+</div>
