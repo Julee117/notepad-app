@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <% unless @notes.empty? %>
+      <% @notes.each do |note| %>
+        <div class="col-md-4">
+          <div class="pad col-md-12">
+            <h4><%= link_to note.title, note_path(note) %></h4>
+            <p><%= note.updated_at.strftime("%b %d, %Y") %></p>
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      <div class="note-header">
+        <h1>Start by creating a new note!</h1>
+        <p><%= link_to "New Note", new_note_path, class: "btn btn-primary" %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
