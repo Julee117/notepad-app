@@ -4,7 +4,7 @@ This is a Rails app for users to jot down their ideas.
 
 ## Getting Started
 
-Install Docker and Docker Compose
+Install Docker and Docker Compose  
 Build Docker images:
 `docker-compose build`
 
